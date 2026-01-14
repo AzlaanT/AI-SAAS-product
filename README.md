@@ -30,3 +30,6 @@ This repository follows professional security standards:
 2. Install dependencies: `pip install -r requirements.txt`
 3. Add your `GEMINI_API_KEY` to a local `.env` file.
 4. Run `gui.py` to launch the application.
+
+**IMPORTANT**
+This product has not been finalised and it requies some work before using. Its GUI needs updating which when done will make it more better

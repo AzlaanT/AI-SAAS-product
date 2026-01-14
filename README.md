@@ -33,3 +33,5 @@ This repository follows professional security standards:
 
 **IMPORTANT**
 This product has not been finalised and it requies some work before using. Its GUI needs updating which when done will make it more better
+
+## 📺 [Live Video Demo: Click Here to Watch on LinkedIn](https://www.linkedin.com/posts/azlaan-tauheed-b6855637b_artificialintelligence-python-saas-activity-7417243941864927233-P_vY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF3gMAAB2UDTyoIvYjkfB2ZDu3M-RxpbtHE)

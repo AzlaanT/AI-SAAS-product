@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import ai2  # This imports your ai2.py file
+import ai2  
 import threading
 
 # --- GUI Appearance Settings ---
@@ -13,7 +13,7 @@ class BusinessAIApp(ctk.CTk):
         # Window Setup
         self.title("Business Intelligence Manager v2.0")
         self.geometry("950x700")
-        self.configure(fg_color="#212121") # Deep Grey Background
+        self.configure(fg_color="#212121") 
 
         # Layout Configuration
         self.grid_columnconfigure(0, weight=1)
@@ -23,7 +23,7 @@ class BusinessAIApp(ctk.CTk):
         self.chat_display = ctk.CTkTextbox(
             self, 
             corner_radius=15, 
-            fg_color="#2b2b2b", # Lighter Grey for text area
+            fg_color="#2b2b2b",
             border_color="#3d3d3d",
             border_width=2,
             font=("Inter", 14)
@@ -78,19 +78,19 @@ class BusinessAIApp(ctk.CTk):
         # Set a processing status
         self.append_chat("System", "Analyzing data and searching market trends...")
 
-        # Run in a thread so the UI doesn't freeze during API/Search calls
         threading.Thread(target=self.process_ai_request, args=(user_text,), daemon=True).start()
 
     def process_ai_request(self, user_text):
         try:
-            # THIS IS THE KEY: Calling your exact function name from ai2.py
+ 
             response = ai2.ask_ai_pro(user_text)
             
-            # Use .after to update the UI from the background thread safely
+     
             self.after(0, lambda: self.append_chat("AI Manager", response))
         except Exception as e:
             self.after(0, lambda: self.append_chat("Error", str(e)))
 
 if __name__ == "__main__":
     app = BusinessAIApp()
+
     app.mainloop()
